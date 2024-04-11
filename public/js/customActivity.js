@@ -23,7 +23,7 @@ define([
 
     function initialize(data) {
         if (data) {
-            payload = data;``
+            payload = data;
             var setcpURL = payload['arguments'].execute.inArguments[0].cloudpageURL;
             $('#cpURL').val(setcpURL);
         }
