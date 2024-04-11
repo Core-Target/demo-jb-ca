@@ -32,6 +32,7 @@
         }
     },
     "configurationArguments": {
+      "applicationExtensionKey": "e2c03c07-c5f1-4ee7-aba3-d2760f801e6f",
       "save": {
         "url": "https://sfmc-demo-jb-ca-7ccc6f8da34e.herokuapp.com/journeybuilder/save",
           "verb": "POST",
