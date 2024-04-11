@@ -19,7 +19,7 @@
                 {"subscriberKey":"{{Contact.Key}}"}
             ],
           "outArguments": [],
-          "url": "https://automating-mc-jbca.herokuapp.com/journeybuilder/execute",
+          "url": "https://sfmc-demo-jb-ca-7ccc6f8da34e.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
             "body": "",
             "header": "",
@@ -32,22 +32,22 @@
     },
     "configurationArguments": {
       "save": {
-        "url": "https://automating-mc-jbca.herokuapp.com/journeybuilder/save",
+        "url": "https://sfmc-demo-jb-ca-7ccc6f8da34e.herokuapp.com/journeybuilder/save",
           "verb": "POST",
         "useJwt": true
        },
        "publish": {
-        "url": "https://automating-mc-jbca.herokuapp.com/journeybuilder/publish",
+        "url": "https://sfmc-demo-jb-ca-7ccc6f8da34e.herokuapp.com/journeybuilder/publish",
            "verb": "POST",
         "useJwt": true
        },
       "stop": {
-        "url": "https://automating-mc-jbca.herokuapp.com/journeybuilder/stop",
+        "url": "https://sfmc-demo-jb-ca-7ccc6f8da34e.herokuapp.com/journeybuilder/stop",
            "verb": "POST",
         "useJwt": true
       },
       "validate": {
-        "url": "https://automating-mc-jbca.herokuapp.com/journeybuilder/validate",
+        "url": "https://sfmc-demo-jb-ca-7ccc6f8da34e.herokuapp.com/journeybuilder/validate",
         "verb": "POST",
         "useJwt": true
       }
