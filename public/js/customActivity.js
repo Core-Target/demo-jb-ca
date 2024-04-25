@@ -24,6 +24,7 @@ define([
     function initialize(data) {
         if (data) {
             payload = data;
+            console.log(payload);
             var setcpURL = payload['arguments'].execute.inArguments[0].cloudpageURL;
             $('#cpURL').val(setcpURL);
         }
