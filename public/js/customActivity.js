@@ -5,6 +5,11 @@ define([
 ) {
     'use strict';
 
+    // Configuration variables
+    let eventSchema = ''; // variable is used in parseEventSchema()
+    let lastnameSchema = ''; // variable is used in parseEventSchema()
+    let eventDefinitionKey;
+
     var connection = new Postmonger.Session();
     var payload = {};
     $(window).ready(onRender);
@@ -22,6 +27,18 @@ define([
         connection.trigger("requestTokens");
         connection.trigger('requestEndpoints');
     }
+
+    /**
+     * This function is to pull out the event definition within journey builder.
+     * With the eventDefinitionKey, you are able to pull out values that passes through the journey
+     */
+    connection.trigger('requestTriggerEventDefinition');
+    connection.on('requestedTriggerEventDefinition', function (eventDefinitionModel) {
+        if (eventDefinitionModel) {
+            eventDefinitionKey = eventDefinitionModel.eventDefinitionKey;
+            // console.log('Request Trigger >>>', JSON.stringify(eventDefinitionModel));
+        }
+    });
 
     function initialize(data) {
         if (data) {
