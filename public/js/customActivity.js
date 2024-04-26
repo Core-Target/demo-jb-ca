@@ -46,9 +46,9 @@ define([
             payload = data;
             console.log(payload);
             var setcpURL = payload['arguments'].execute.inArguments[0].cloudpageURL;
-            var teste = "AAA";
+            var subKey = "{{Event." + eventDefinitionKey + ".SubscriberKey}}";
 //            $('#cpURL').val(setcpURL);
-            $('#cpURL').val(teste);
+            $('#cpURL').val(subKey);
         }
     }
 
