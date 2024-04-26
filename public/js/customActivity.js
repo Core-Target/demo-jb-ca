@@ -38,6 +38,7 @@ define([
             eventDefinitionKey = eventDefinitionModel.eventDefinitionKey;
             // console.log('Request Trigger >>>', JSON.stringify(eventDefinitionModel));
         }
+    console.log(eventDefinitionKey);
     });
 
     function initialize(data) {
