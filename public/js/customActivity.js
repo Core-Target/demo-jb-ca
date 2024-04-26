@@ -11,8 +11,9 @@ define([
 
     connection.on('initActivity', initialize);
     connection.on('clickedNext', save);
-
+    connection.on('requestedEndpoints', onGetEndpoints);
     connection.on("requestedTokens", onGetTokens);
+
     function onGetTokens(tokens) {
       console.log(tokens);
     }
@@ -28,6 +29,11 @@ define([
             var setcpURL = payload['arguments'].execute.inArguments[0].cloudpageURL;
             $('#cpURL').val(setcpURL);
         }
+    }
+
+    function onGetEndpoints (endpoints) {
+        // Response: endpoints = { restHost: <url> } i.e. "rest.s1.qa1.exacttarget.com"
+        console.log("Get End Points function: "+JSON.stringify(endpoints));
     }
 
     function save() {
